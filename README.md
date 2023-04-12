@@ -1,1 +1,1 @@
-# ConsumingRestWithANC
+# Consuming Rest API With Asp.Net Core Razor Pages
