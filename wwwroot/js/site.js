@@ -2,3 +2,9 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+// Reload page after 30 seconds
+setTimeout(function () {
+    location.reload();
+}
+, 20000);
