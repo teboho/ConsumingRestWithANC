@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Cat Fact | Home page";
 }
 
 @{
@@ -15,7 +15,7 @@
     <div class="card text-center" style="width: 50%; margin-left: auto; margin-right: auto;">
         <img src="/cat.jpg" class="card-img-top">
         <div class="card-body">
-            <h6 class="card-title display-6">Here's a random cat factxD</h6>
+            <h6 class="card-title display-6">Random cat fact xD</h6>
             <p class="card-body">@IndexModel.catFact.fact</p>
         </div>
         <div class="card-footer">
@@ -23,13 +23,3 @@
         </div>
     </div>
 }
-@*
-@{
-    for (int i = 0; i < 4; i++)
-    {
-        
-        <h1 class="display-1 
-                 hover-overlay hover-zoom hover-shadow ripple
-            text-light bg-gradient bg-success p-5">Line @i</h1>
-    }
-*@
