@@ -20,6 +20,7 @@ namespace ConsumingRestWithANC.Pages
 
         /// <summary>
         /// Asyncronously gets the cat fact from the api path and stores it in the catFact object
+        /// Modifies the CatFact object
         /// </summary>
         /// <param name="path">The path of the api</param>
         /// <returns>Task i.e. Ends the Thread</returns>
