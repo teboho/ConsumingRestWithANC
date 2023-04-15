@@ -15,7 +15,9 @@ namespace ConsumingRestWithANC.Pages
         static HttpClient? Client;
         public static string Message { get; set; } = "PageMode in C#";
         
-        // The object that will hold the cat fact for the view/page in this context
+        /// <summary>
+        /// The object that will hold the cat fact for the view/page in this context
+        /// </summary>
         public static CatFact? catFact;
 
         /// <summary>
@@ -45,10 +47,10 @@ namespace ConsumingRestWithANC.Pages
             _logger = logger;
         }
 
-        // <summary>
-        // Asynchrononusly executes the method that executes the thread to talk to the api
-        // </summary>
-        // <returns>The task: it's end</returns>
+        /// <summary>
+        /// Asynchrononusly executes the method that executes the thread to talk to the api
+        /// </summary>
+        /// <returns>The task: it's end</returns>
         static async Task RunAsync()
         {
             if (!Client.Equals(null))
@@ -72,6 +74,9 @@ namespace ConsumingRestWithANC.Pages
             }
         }
 
+        /// <summary>
+        /// Executes when the index page gets loaded
+        /// </summary>
         public void OnGet()
         {
             // Aka on load :)
