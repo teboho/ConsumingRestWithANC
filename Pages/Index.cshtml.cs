@@ -21,6 +21,7 @@ namespace ConsumingRestWithANC.Pages
         /// <summary>
         /// Asyncronously gets the cat fact from the api path and stores it in the catFact object
         /// Modifies the CatFact object
+        /// Eventually this function will moved to the a client class
         /// </summary>
         /// <param name="path">The path of the api</param>
         /// <returns>Task i.e. Ends the Thread</returns>
@@ -50,21 +51,24 @@ namespace ConsumingRestWithANC.Pages
         // <returns>The task: it's end</returns>
         static async Task RunAsync()
         {
-            // Set the base address of the api
-            Client.BaseAddress = new Uri(api); 
-            // Remove all default headers
-            Client.DefaultRequestHeaders.Accept.Clear();
-            // We are expect a JSON response
-            Client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            if (!Client.Equals(null))
+            {
+                // Set the base address of the api
+                Client.BaseAddress = new Uri(api);
+                // Remove all default headers
+                Client.DefaultRequestHeaders.Accept.Clear();
+                // We are expect a JSON response
+                Client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
 
-            try
-            {
-                await GetCatFactAsync("fact");
-            } 
-            catch (Exception e)
-            {
-                Message = e.Message;
+                try
+                {
+                    await GetCatFactAsync("fact");
+                }
+                catch (Exception e)
+                {
+                    Message = e.Message;
+                }
             }
         }
 
